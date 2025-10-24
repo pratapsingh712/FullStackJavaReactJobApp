@@ -31,9 +31,16 @@ public class JobRestController {
         return jobService.getJob(postId);
     }
 
+//    @PostMapping("jobPost")
+//    public JobPost addJob(@RequestBody JobPost jobPost){
+//        jobService.addJob(jobPost);
+//        return jobPost; -------returning this has a problem that we don't know if it's stored in the collection or not to overcome this refer below method
+//    }
+
     @PostMapping("jobPost")
     public JobPost addJob(@RequestBody JobPost jobPost){
         jobService.addJob(jobPost);
-        return jobPost;
+        return jobService.getJob(jobPost.getPostId());
     }
+
 }
