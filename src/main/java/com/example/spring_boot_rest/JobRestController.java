@@ -25,5 +25,13 @@ public class JobRestController {
         return jobService.getAllJobs();
     }
 
+//    @GetMapping("jobPost/103")
+//    public JobPost getJob(){
+//        return jobService.getJob(103);
+//    }
 
+    @GetMapping("jobPost/{postId}")
+    public JobPost getJob(int postId){
+        return jobService.getJob(postId);
+    }
 }
