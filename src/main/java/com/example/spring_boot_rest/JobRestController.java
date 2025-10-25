@@ -26,7 +26,7 @@ public class JobRestController {
 //        return jobService.getJob(103);
 //    }
 
-    @GetMapping("jobPost/{postId}")
+    @GetMapping(path="jobPost/{postId}", produces = {"application/json"})
     public JobPost getJob(@PathVariable int postId){
         return jobService.getJob(postId);
     }
@@ -37,13 +37,13 @@ public class JobRestController {
 //        return jobPost; -------returning this has a problem that we don't know if it's stored in the collection or not to overcome this refer below method
 //    }
 
-    @PostMapping("jobPost")
+    @PostMapping(path="jobPost", consumes = {"application/xml"})
     public JobPost addJob(@RequestBody JobPost jobPost){
         jobService.addJob(jobPost);
         return jobService.getJob(jobPost.getPostId());
     }
 
-    @PutMapping("jobPost")
+    @PutMapping(path="jobPost", consumes = {"application/xml"})
     public JobPost updateJob(@RequestBody JobPost jobPost){
         jobService.updateJob(jobPost);
         return jobService.getJob(jobPost.getPostId());
