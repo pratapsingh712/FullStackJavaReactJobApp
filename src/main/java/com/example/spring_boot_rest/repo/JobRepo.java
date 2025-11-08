@@ -1,6 +1,7 @@
 package com.example.spring_boot_rest.repo;
 
 import com.example.spring_boot_rest.model.JobPost;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -8,10 +9,14 @@ import java.util.Arrays;
 import java.util.List;
 
 @Repository
-public class JobRepo {
-    // mocking like an actual database
+public class JobRepo extends JpaRepository<JobPost, Integer> {
 
-    List<JobPost> jobs = new ArrayList<>(Arrays.asList(
+
+}
+
+// mocking like an actual database
+/*
+ List<JobPost> jobs = new ArrayList<>(Arrays.asList(
             new JobPost(101, "Backend Developer", "Responsible for building and maintaining server-side applications.",
                     3, Arrays.asList("Java", "Spring Boot", "MySQL")),
 
@@ -90,4 +95,4 @@ public class JobRepo {
             }
         }
     }
-}
+ */
