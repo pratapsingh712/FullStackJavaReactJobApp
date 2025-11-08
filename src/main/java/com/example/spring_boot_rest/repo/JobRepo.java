@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Repository
-public class JobRepo extends JpaRepository<JobPost, Integer> {
+public interface JobRepo extends JpaRepository<JobPost,Integer> {
 
 
 }
