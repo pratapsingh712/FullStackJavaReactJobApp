@@ -1,5 +1,6 @@
 package com.example.spring_boot_rest.aop;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -14,7 +15,7 @@ public class LoggingAspect {
 
     //execution(return type, class-name.method-name(args)
     @Before("execution(* com.example.spring_boot_rest.service.JobService.*(..))")
-    public void logMethodCall(){
-        LOGGER.info("Method called :");
+    public void logMethodCall(JoinPoint joinPoint){
+        LOGGER.info("Method called :"+joinPoint.getSignature().getName());
     }
 }
