@@ -1,4 +1,4 @@
 Username	Plain Password	BCrypt (strength 12)
-john	    password123	    $2a$12$5m5ApB1jEnC2Hy7kG8xO7uL/6CkXbkqVKgf/mBlC9ZwTe74MkRUgy
-alice	    welcome123	    $2a$12$A4E1bWz9mG9GLRWyKqjE8.WuxMxDPZWS9Vyuk3F7S3w7Dnk3a1J1a
-bob	        admin123	    $2a$12$4D88YVbzqfFq6UaYllHy9OhB3dC1uWuBzV0w.zAV/QXpVZl8vGe/y
+john	    password123	    $2a$12$M.a4hCFHPZzgIAGJr9PK..Tmw9oIOeQBHssbfOhJCTwXie7jeUSIK
+alice	    welcome123	    $2a$12$LQwscORM/7pWl/nn82lJw..nbHZTNquIDAwLH4aUUaFOzxvMhFyhO
+bob	        admin123	    $2a$10$yP2q6oA0I9axsrjYX5o64ez2XyG5pn9E.yabgsLDg/O2mwJuv83e2
