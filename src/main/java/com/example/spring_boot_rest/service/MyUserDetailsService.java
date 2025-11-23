@@ -1,6 +1,7 @@
 package com.example.spring_boot_rest.service;
 
 import com.example.spring_boot_rest.model.User;
+import com.example.spring_boot_rest.model.UserPrincipal;
 import com.example.spring_boot_rest.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
