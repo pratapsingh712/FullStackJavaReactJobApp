@@ -1,4 +1,4 @@
-package com.example.spring_boot_rest;
+package com.example.spring_boot_rest.controller;
 
 import com.example.spring_boot_rest.model.JobPost;
 import com.example.spring_boot_rest.service.JobService;
@@ -9,6 +9,7 @@ import java.util.List;
 
 //@Controller
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class JobRestController {
 
     @Autowired
@@ -16,7 +17,7 @@ public class JobRestController {
 
     @GetMapping("jobPosts")
 //    @ResponseBody -- this is not required as I am using RestController now and it does not think below method is returning jsp by default
-    @CrossOrigin(origins = "http://localhost:3000")
+//    @CrossOrigin(origins = "http://localhost:3000")
     public List<JobPost> getAllJobs(){
         return jobService.getAllJobs();
     }
